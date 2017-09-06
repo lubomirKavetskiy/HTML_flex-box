@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@mixin adaptive($media) {
+  //WIDTH:
+
+  // special small devices:
+  @if $media == max_480 {
+    @media screen and (max-width:480px) {@content}
+  }
+
+  @if $media == min_481 {
+    @media screen and (min-width:481px) {@content}
+  }
+    // extra small devices:
+  @else if $media == max_767 {
+    @media screen and (max-width:767px) {@content}
+  }
+    // for navigation:
+  @else if $media == min_768 {
+    @media screen and (min-width:768px) {@content}
+  }
+    // small devices:
+  @else if $media == max_991 {
+    @media screen and (max-width:991px) {@content}
+  }
+    // medium devices:
+  @else if $media == max_1199{
+    @media screen and (max-width:1199px) {@content}
+  }
+    // large devices:
+  @else if $media == min_1200 {
+    @media screen and (min-width:1200px) {@content}
+  }
+
+  @else if $media == max_1300 {
+    @media screen and (max-width:1300px) {@content}
+  }
+
+  //HEIGHT
+  @if $media == maxHeight280 {
+    @media screen and (max-height:280px) {@content}
+  }
+}

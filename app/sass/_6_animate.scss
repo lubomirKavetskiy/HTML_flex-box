@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@keyframes flicker {
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}

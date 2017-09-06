@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+.page__jewerly-stores {
+  padding: 115px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: #f6f6f6;
+
+  .jewerly-stores {
+
+    &__text {
+      margin-bottom: 55px;
+      text-align: center;
+    }
+
+    &__slider {
+      position: relative;
+      background-color: transparent;
+
+      .slider {
+
+        &__wrap {
+          margin-right: -10px;
+          margin-left: -10px;
+          overflow: hidden;
+        }
+
+        &__items {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          overflow: hidden;
+          background-color: transparent;
+          transition: all 0.5s ease;
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            max-width: 283px;
+            background-color: #FFF;
+            text-align: center;
+
+            img {
+              margin-bottom: 30px;
+              max-width: 100%;
+              height: 100%;
+            }
+
+            h5 {
+              margin-bottom: 10px;
+
+              font-family: "Ubuntu-regular";
+              font-weight: 300;
+              font-size: 20px;
+              color: #000;
+            }
+
+            p {
+              margin-bottom: 25px;
+
+              font-family: "Ubuntu-regular";
+              font-weight: 300;
+              font-size: 14px;
+              color: #7c7c7c;
+            }
+
+            .slider__btn {
+              margin-bottom: 30px;
+
+              padding: 13px 38px;
+              border: 2px solid #925ebf;
+              background-color: transparent;
+
+              font-family: "Ubuntu-regular";
+              font-size: 16px;
+              color: #262626;
+
+              &:hover {
+                background-color: #925ebf;
+                color: #FFF;
+              }
+            }
+          }
+        }
+      }
+
+      .slider__arrow {
+        margin-top: -21px;
+
+        position: absolute;
+        top: 50%;
+
+        display: block;
+        width: 22px;
+        height: 41px;
+
+        background-color: transparent;
+        background-image: url("../img/sprite-slider-arrow.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &:active {
+          outline: none!important;
+          outline-offset: 0;
+        }
+
+        &:focus {
+          outline: 0;
+          outline-offset: 0;
+        }
+      }
+    }
+  }
+}
+
+#arrow-left {
+  left: -45px;
+  background-position: top left;
+}
+
+#arrow-right {
+  right: -45px;
+  background-position: top right;
+}
+
+//=================================//
+// adaptive //
+//=================================//
+
+@include adaptive(max_1300) {
+  .page__jewerly-stores {
+
+    .jewerly-stores {
+
+      &__slider {
+
+        .slider {
+
+          &__wrap {
+            margin-right: 25px;
+            margin-left: 25px;
+          }
+
+          &__item {
+            div {
+              max-width: 255px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #arrow-left {
+    left: -15px;
+  }
+
+  #arrow-right {
+    right: -15px;
+  }
+}
+
+@include adaptive(max_1199) {
+  .page__jewerly-stores {
+    padding: 90px 0;
+
+    .jewerly-stores {
+
+      &__text {
+        margin-bottom: 45px;
+      }
+
+      &__slider {
+
+        .slider {
+
+          &__wrap {
+            margin-right: 20px;
+            margin-left: 20px;
+          }
+
+          &__item {
+
+            div {
+              max-width: 283px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #arrow-left {
+    left: -10px;
+  }
+
+  #arrow-right {
+    right: -10px;
+  }
+}
+
+@include adaptive(max_991) {
+   .page__jewerly-stores {
+     padding: 80px 0;
+
+     .jewerly-stores {
+
+       &__text {
+         margin-bottom: 40px;
+       }
+     }
+   }
+
+   #arrow-left {
+     left: 5px;
+   }
+
+   #arrow-right {
+     right: 5px;
+   }
+ }
+
+@include adaptive(max_767) {
+  .page__jewerly-stores {
+    padding: 60px 0;
+
+    .jewerly-stores {
+
+      &__text {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  #arrow-left {
+    left: 20px;
+  }
+
+  #arrow-right {
+    right: 20px;
+  }
+}
+
+@include adaptive(max_480) {
+  .page__jewerly-stores {
+    padding: 60px 0;
+
+    .jewerly-stores {
+
+      &__text {
+        margin-bottom: 30px;
+      }
+
+      &__slider {
+
+        .slider {
+
+          &__wrap {
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+
+        .slider__arrow {
+          margin-top: 0;
+          top: 0;
+          height: 250px;
+          width: 100px;
+          opacity: 0;
+
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  #arrow-left {
+    left: 6%;
+  }
+
+  #arrow-right {
+    right: 6%;
+  }
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+//=================================//
+// global style-files //
+//=================================//
+@import "1_normalize";
+@import "2_media-breakpoints";
+@import "3_fonts";
+@import "4_page";
+@import "5_btn";
+@import "6_animate";
+@import "7_section-text";
+
+//=================================//
+// blocks style-files //
+//=================================//
+@import "8_page__first-fictures";
+@import "9_page__jewelry-stores";
+@import "10_page__our-company";
